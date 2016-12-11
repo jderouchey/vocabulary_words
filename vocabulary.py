@@ -6,7 +6,7 @@ import pygame
 pygame.init()
 
 
-vocabulary_words = glob.glob("/home/owner/Music/spell/*.wav")
+vocabulary_words = glob.glob("./*.wav")
 score = 0
 count = 0
 
@@ -22,8 +22,8 @@ for vocabulary_word in vocabulary_words:
 		print ('Incorrect')
 		print (spell_word)
 print ('Your score is ' + str(score))
-		
-		rade = float(score)/float(count) * 100
+
+grade = float(score)/float(count) * 100
 
 print ('Your grade is ' + str(grade))
 
