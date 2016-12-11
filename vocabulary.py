@@ -2,11 +2,20 @@
 import glob
 import os
 import pygame
+import Tkinter, tkFileDialog
+
+
+root = Tkinter.Tk()
+dirname = tkFileDialog.askdirectory(parent=root,initialdir="~",title='Please select a directory')
+root.destroy()
+
+print (dirname)
+
 
 pygame.init()
 
 
-vocabulary_words = glob.glob("./*.wav")
+vocabulary_words = glob.glob( dirname + "/*.wav")
 score = 0
 count = 0
 
